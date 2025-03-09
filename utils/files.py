@@ -1,13 +1,15 @@
 
-def write_markdown_file(file_name:str, content:list)-> str:
+def write_markdown_file(file_path:str, content:str|list)->str:
     
-    page_content = ""
+    if isinstance(content, list):
+        page_content = ""
     
-    for _content in content:
-        page_content += _content
+        for _content in content:
+            page_content += _content
         
-    with open(file_name, "w", encoding="utf-8") as file:
+    with open(file_path, "w", encoding="utf-8") as file:
         print("Writing markdown file...")
         file.write(page_content)
         
-    return file_name
+    print("Markdown file written successfully!")
+            

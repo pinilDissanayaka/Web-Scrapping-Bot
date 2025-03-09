@@ -33,6 +33,7 @@ def scrape_page(url: str)-> list:
             
             
             
-def scape_web(base_url:str="https://nolooptech.com/"):
+def scape_web(base_url:str)->list:
     web_content=scrape_page(base_url)
+    
     return web_content
