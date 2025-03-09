@@ -1,4 +1,5 @@
-from utils import scape_web
+from utils import scape_web, write_markdown_file
 
-
-print(scape_web())
+if __name__ == "__main__":
+    web_content = scape_web()
+    write_markdown_file("output.md", web_content)
