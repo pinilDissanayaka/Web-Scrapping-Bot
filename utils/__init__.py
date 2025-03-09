@@ -1,0 +1,1 @@
+from .scraper import scape_web, scrape_page
